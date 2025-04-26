@@ -1,0 +1,52 @@
+@use 'variables'
+
+@mixin text-DO()
+    text-decoration: none !important
+    outline: none !important
+
+@mixin fontAwesomeCreate($iconCode)
+    content: $iconCode
+    font-family: 'Font Awesome 6 Free'
+    font-weight: 700
+
+@mixin rowCreate($marginVal)
+    display: -ms-flexbox
+    display: flex
+    -ms-flex-wrap: wrap
+    flex-wrap: wrap
+    margin: 
+        right: $marginVal
+        left: $marginVal
+
+@mixin colCreate($paddingVal, $widthVal)
+    position: relative
+    width: 100%
+    min-height: 1px
+    padding: 
+        right: $paddingVal
+        left: $paddingVal
+    max-width: $widthVal
+    flex: 0 0 $widthVal
+
+/* Code Ex: backgroundShadowCreate(3px, 6px, rgba(0,0,0,0.15)) */
+@mixin backgroundShadowCreate($v1, $v2, $color)
+    -webkit-box-shadow: 0px $v1 $v2 0px $color
+    -moz-box-shadow: 0px $v1 $v2 0px $color
+    box-shadow: 0px $v1 $v2 0px $color
+
+@mixin textAfterDots($maxHeight, $minHeight, $lineCount)
+    max-height: $maxHeight
+    min-height: $minHeight
+    overflow: hidden
+    text-overflow: ellipsis
+    display: -webkit-box
+    -webkit-line-clamp: $lineCount
+    -webkit-box-orient: vertical
+
+@mixin textCreate1($fontSize, $lineHeight, $fontWeight, $fontColor, $marginBottom)
+    font-size: $fontSize
+    line-height: $lineHeight
+    font-weight: $fontWeight
+    color: $fontColor
+    margin:
+        bottom: $marginBottom

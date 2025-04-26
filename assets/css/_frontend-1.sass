@@ -1,0 +1,43 @@
+@use 'variables'
+@use 'short-code'
+
+*
+    font-family: variables.$mainFontFamily
+html
+    scroll-behavior: smooth
+a,button
+    @include short-code.text-DO
+    cursor: pointer
+a
+    &:hover, &:focus
+        @include short-code.text-DO
+button
+    &:hover, &:focus
+        @include short-code.text-DO
+#goTpButton
+    display: inline-block
+    background-color: variables.$black
+    width: 40px
+    height: 40px
+    text-align: center
+    border-radius: variables.$radius2
+    position: fixed
+    bottom: 65px
+    right: 30px
+    transition: background-color 0.3s, opacity 0.5s, visibility 0.5s
+    opacity: 0
+    visibility: hidden
+    z-index: 8
+    &::after
+        @include short-code.fontAwesomeCreate('\f077')
+        font-size: 1.5em
+        line-height: 40px
+        color: variables.$white
+    &.show
+        opacity: 0.5
+        visibility: visible
+    &:hover
+        opacity: 1
+        background-color: variables.$color1
+.select2
+    width: 100% !important
