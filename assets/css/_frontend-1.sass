@@ -41,3 +41,349 @@ button
         background-color: variables.$color1
 .select2
     width: 100% !important
+.csm-header-1
+    border-radius: variables.$radius7
+    padding: 5px 30px
+.csm-header-menu-1
+    li
+        margin:
+            right: 25px
+        &:last-child
+            margin:
+                right: 0px
+    a
+        @include short-code.textCreate1(20px, 1.2, variables.$fontWeightSemiBold, variables.$color3, 0px)
+        transition: all .3s ease
+        &:hover
+            color: variables.$color1
+        &.active
+            color: variables.$color2
+            font-weight: variables.$fontWeightBlack
+.csm-btn-1
+    @include short-code.textCreate1(16px, 24px, variables.$fontWeightSemiBold, variables.$color1, 0px)
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    min-height: 45px
+    padding: 5px 10px
+    min-width: 150px
+    background-color: transparent
+    border: 1px solid variables.$color1
+    transition: all .3s ease
+    text-align: center
+    border-radius: variables.$radius6
+    &:hover
+        background-color: variables.$color1
+        color: variables.$white
+    i
+        padding:
+            right: 10px
+.csm-btn-2
+    @include short-code.textCreate1(16px, 24px, variables.$fontWeightSemiBold, variables.$white, 0px)
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    min-height: 45px
+    padding: 5px 10px
+    min-width: 150px
+    background-color: variables.$color2
+    border: 1px solid variables.$color2
+    transition: all .3s ease
+    text-align: center
+    border-radius: variables.$radius6
+    &:hover
+        background-color: transparent
+        color: variables.$color2
+    i
+        padding:
+            right: 10px
+.csm-header-action-m-1
+    .csmham1-item-1
+        margin:
+            right: 20px
+        &:last-child
+            display: none
+            margin:
+                right: 0px
+        &:nth-child(2)
+            margin:
+                right: 0px
+    .csm-btn-1, .csm-btn-2
+        i
+            display: none
+.csm-humberge-m-1
+    cursor: pointer
+    position: relative
+    height: 14px
+    max-width: 32px
+    width: 100%
+    margin: 0 auto
+.csm-humberge-m-1-top
+    border-radius: variables.$radius3
+    height: 4px
+    width: 100%
+    background: variables.$color2
+    position: absolute
+    transform: rotate(0deg)
+    top: 0
+    animation-name: topreverse
+    animation-duration: 0.65s
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1)
+    animation-fill-mode: forwards
+.csm-humberge-m-1-bottom
+    border-radius: variables.$radius3
+    height: 4px
+    width: 100%
+    background: variables.$color2
+    position: absolute
+    transform: rotate(0deg)
+    bottom: 0
+    animation-name: bottomreverse
+    animation-duration: 0.65s
+    animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1)
+    animation-fill-mode: forwards
+.csm-humberge-m-1
+    &.is-active
+        .csm-humberge-m-1-top
+            top: 28.8333333333%
+            animation-name: top
+            animation-duration: 0.65s
+            animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1)
+            animation-fill-mode: forwards
+        .csm-humberge-m-1-bottom
+            bottom: 45.8333333333%
+            animation-name: bottom
+            animation-duration: 0.65s
+            animation-timing-function: cubic-bezier(0.77, 0, 0.175, 1)
+            animation-fill-mode: forwards
+        .no-animation
+            animation: none
+@-webkit-keyframes top
+    0%
+        top: 0%
+    60%
+        top: 45.8333333333%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(45deg)
+@-moz-keyframes top
+    0%
+        top: 0%
+    60%
+        top: 45.8333333333%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(45deg)
+@keyframes top
+    0%
+        top: 0%
+    60%
+        top: 45.8333333333%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(45deg)
+@-webkit-keyframes bottom
+    0%
+        bottom: 0%
+    60%
+        bottom: 45.8333333333%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(-45deg)
+@-moz-keyframes bottom
+    0%
+        bottom: 0%
+    60%
+        bottom: 45.8333333333%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(-45deg)
+@keyframes bottom
+    0%
+        bottom: 0%
+    60%
+        bottom: 45.8333333333%
+        transform: rotate(0deg)
+    100%
+        transform: rotate(-45deg)
+@-webkit-keyframes topreverse
+    0%
+        transform: rotate(45deg)
+        top: 45.8333333333%
+    60%
+        transform: rotate(0deg)
+        top: 45.8333333333%
+    100%
+        top: 0%
+@-moz-keyframes topreverse
+    0%
+        transform: rotate(45deg)
+        top: 45.8333333333%
+    60%
+        transform: rotate(0deg)
+        top: 45.8333333333%
+    100%
+        top: 0%
+@keyframes topreverse
+    0%
+        transform: rotate(45deg)
+        top: 45.8333333333%
+    60%
+        transform: rotate(0deg)
+        top: 45.8333333333%
+    100%
+        top: 0%
+@-webkit-keyframes bottomreverse
+    0%
+        transform: rotate(-45deg)
+        bottom: 45.8333333333%
+    60%
+        transform: rotate(0deg)
+        bottom: 45.8333333333%
+    100%
+        bottom: 0%
+@-moz-keyframes bottomreverse
+    0%
+        transform: rotate(-45deg)
+        bottom: 45.8333333333%
+    60%
+        transform: rotate(0deg)
+        bottom: 45.8333333333%
+    100%
+        bottom: 0%
+@keyframes bottomreverse
+    0%
+        transform: rotate(-45deg)
+        bottom: 45.8333333333%
+    60%
+        transform: rotate(0deg)
+        bottom: 45.8333333333%
+    100%
+        bottom: 0%
+.csm-mobile-menu-d-1
+        position: fixed
+        top: 83px
+        right: 0
+        left: 50%
+        bottom: 0
+        z-index: 10
+        display: block
+        margin: 0
+        width: calc(100% - 30px)
+        height: 0px
+        background-color: variables.$color1
+        overflow: hidden
+        transition: background .44s .2s cubic-bezier(0.52, 0.16, 0.24, 1),height .56s cubic-bezier(0.52, 0.16, 0.24, 1)
+        transform: translateX(-50%)
+        border-radius: variables.$radius6
+        &.active
+            height: calc(100vh - 81px)
+            .content-area-1
+                opacity: 1
+                overflow-y: auto
+        .content-area-1
+            display: block
+            max-width: 600px
+            margin: 0 auto
+            padding: 45px 40px
+            opacity: 0
+            transition: opacity .3s ease
+            transition-delay: 250ms
+            overflow: hidden
+            max-height: 70vh
+.csm-mobile-menu-1
+    padding:
+        bottom: 30px
+    .level-1
+        line-height: 1
+        margin:
+            bottom: 5px
+    .level-link-1
+        position: relative
+        display: block
+        @include short-code.textCreate1(16px, 1.2, variables.$fontWeightBold, variables.$color2, 0px)
+        padding: 10px 20px 10px 0px
+        transition: all 0.3s ease
+.csm-slider-1
+    .csms1-bg-d-1
+        background-position: center !important
+        background-repeat: no-repeat !important
+        background-size: cover !important
+    .csms1-text-1
+        @include short-code.textCreate1(70px, 1.2, variables.$fontWeightExtraBold, variables.$white, 20px)
+    .csms1-text-2
+        @include short-code.textCreate1(20px, 1.4, variables.$fontWeightRegular, variables.$white, 30px)
+    &.owl-theme
+        .owl-nav
+            &.disabled+.owl-dots
+                margin: 0
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+                bottom: 90px
+        .owl-dots
+            .owl-dot
+                span
+                    width: 40px
+                    background: variables.$white
+                    border: 1px solid variables.$color2
+                &.active
+                    span
+                        width: 60px
+                        background: variables.$color2
+                &:hover
+                    span
+                        background: variables.$color7
+
+.csm-wave-d-1
+    background: url(../img/other/wave-bg-1.svg)
+    background-position: center !important
+    background-repeat: no-repeat !important
+    background-size: cover !important
+    position: absolute
+    left: 50%
+    bottom: 0px
+    transform: translateX(-50%)
+    z-index: 2
+    width: 100%
+    height: 85px
+.csm-btn-3
+    @include short-code.textCreate1(16px, 24px, variables.$fontWeightSemiBold, variables.$white, 0px)
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    min-height: 45px
+    padding: 5px 10px
+    min-width: 150px
+    background-color: variables.$color1
+    border: 1px solid variables.$color1
+    transition: all .3s ease
+    text-align: center
+    border-radius: variables.$radius6
+    &:hover
+        background-color: variables.$color6
+        color: variables.$white
+        border-color: variables.$color6
+    i
+        padding:
+            right: 10px
+.csm-btn-4
+    @include short-code.textCreate1(16px, 24px, variables.$fontWeightSemiBold, variables.$white, 0px)
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    min-height: 45px
+    padding: 5px 10px
+    min-width: 150px
+    background-color: variables.$color2
+    border: 1px solid variables.$color2
+    transition: all .3s ease
+    text-align: center
+    border-radius: variables.$radius6
+    &:hover
+        background-color: variables.$color7
+        color: variables.$white
+        border-color: variables.$color7
+    i
+        padding:
+            right: 10px

@@ -2,7 +2,66 @@
 @use 'short-code'
 
 @media (min-width:1024px) and (max-width:1100px)
+    .csm-slider-1
+        .csms1-text-1
+            font-size: 60px
+
+@media (max-width: 1023px)
+    .csm-body-ovf-1
+        overflow: hidden
+    .csm-header-action-m-1
+        .csmham1-item-1
+            margin:
+                right: 10px
+            &:last-child
+                display: inline-flex
+                max-width: 40px
+                width: 100%
+            &:nth-child(2)
+                margin:
+                    right: 10px
 
 @media (min-width:768px) and (max-width: 1023px)
+    .csm-header-1
+        padding: 5px 10px
+    .csm-btn-1, .csm-btn-2
+        min-height: 35px
+        font-size: 14px
+    .csm-slider-1
+        .csms1-text-1
+            font-size: 40px
+        .csms1-text-2
+            font-size: 18px
 
 @media (max-width:767px)
+    .csm-header-1
+        padding: 8px 10px
+    .csm-header-action-m-1
+        .csm-btn-1, .csm-btn-2
+            min-height: 40px
+            min-width: 40px
+            i
+                display: block
+                padding:
+                    right: 0px
+            span
+                display: none
+    .csm-mobile-menu-d-1
+        top: 85px
+        &.active
+            height: calc(100vh - 86px)
+    .csm-slider-1
+        .csms1-text-1
+            font-size: 28px
+        .csms1-text-2
+            font-size: 14px
+        .csms1-bg-d-1
+            background-position: 75% !important
+        &.owl-theme
+            .owl-nav
+                &.disabled+.owl-dots
+                    bottom: 45px
+    .csm-btn-3, .csm-btn-4
+        min-height: 40px
+    .csm-wave-d-1
+        height: 40px
