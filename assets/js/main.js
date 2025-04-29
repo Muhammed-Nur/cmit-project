@@ -33,3 +33,33 @@ if($('.csm-mobileJS-1').length > 0){
     });
 }
 /* Mobile Menu End */
+
+/* Input Text Type Only Number Start */
+if($('.only-number').length > 0){
+    $('.only-number').keypress(function(event){
+        if(event.which != 8 && isNaN(String.fromCharCode(event.which))){
+            event.preventDefault();
+        }
+    });
+}
+/* Input Text Type Only Number End */
+
+/* Quantity Start */
+$('.jsQuantity1 .add').click(function () {
+    $(this).parents('.jsQuantity1').find('.q-box').val(+$(this).parents('.jsQuantity1').find('.q-box').val() + 1);
+});
+
+$('.jsQuantity1 .sub').click(function () {
+    if ($(this).parents('.jsQuantity1').find('.q-box').val() > 1) {
+        if ($(this).parents('.jsQuantity1').find('.q-box').val() > 1){
+            $(this).parents('.jsQuantity1').find('.q-box').val(+$(this).parents('.jsQuantity1').find('.q-box').val() - 1);
+        }
+    }
+});
+
+$('.jsQuantity1 .q-box').on('change', function(){
+    if($(this).val() < 1){
+        $(this).val(1);
+    }
+});
+/* Quantity End */
