@@ -387,3 +387,203 @@ button
     i
         padding:
             right: 10px
+.csm-hmpg-sec-2
+    padding: 35px 0px 45px
+.csm-icon-head-1
+    @include short-code.textCreate1(15px, 1.2, variables.$fontWeightExtraBold, variables.$black, 10px)
+    letter-spacing: 1.5px
+    &::before
+        @include short-code.fontAwesomeCreate('\e574')
+        margin:
+            right: 10px
+        background-color: variables.$color1
+        border-radius: 50%
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: 30px
+        height: 30px
+        color: variables.$color2
+        font-size: 16px
+.csm-global-head-1
+    @include short-code.textCreate1(50px, 1.3, variables.$fontWeightBold, variables.$color1, 40px)
+    letter-spacing: 4px
+    span
+        font-weight: variables.$fontWeightExtraBold
+        color: variables.$color2
+.csm-icon-card-1
+    display: flex
+    flex-wrap: wrap
+    align-content: space-between
+    height: 100%
+    border: 2px solid variables.$white
+    border-radius: variables.$radius6
+    @include short-code.backgroundShadowCreate(3px, 20px, rgba(0,0,0,.3))
+    padding: 18px
+    background-color: var(--bg-color)
+    transition: all .3s ease
+    .csmic1-head-1
+        @include short-code.textCreate1(22px, 1.4, variables.$fontWeightExtraBold, variables.$white, 15px)
+        letter-spacing: 2px
+    .csmic1-image-d-1
+        text-align: center
+        margin:
+            bottom: 15px
+        img
+            max-height: 80px
+    .csmic1-link-1
+        @include short-code.textCreate1(16px, 1.4, variables.$fontWeightExtraBold, variables.$white, 0px)
+        letter-spacing: 1.6px
+        i
+            padding:
+                left: 8px
+            transition: all .3s ease
+    &:hover
+        transform: scale(1.05)
+        .csmic1-link-1
+            i
+                padding:
+                    left: 15px
+.csm-hmpg-sec-3
+    padding: 45px 0px
+    background-color: variables.$color5
+    &::before
+        content: ''
+        background-image: url(../img/other/balloon-bg-1.svg)
+        background-position: bottom !important
+        background-repeat: no-repeat !important
+        background-size: contain !important
+        width: 100%
+        height: 100%
+        position: absolute
+        left: 50%
+        bottom: 0
+        z-index: 0
+        transform: translateX(-50%)
+.csm-support-card-1
+    height: 100%
+    border-radius: variables.$radius6
+    background-color: variables.$white
+    @include short-code.backgroundShadowCreate(3px, 20px, rgba(0,0,0,.1))
+    padding: 20px
+    transition: all .3s ease
+    display: flex
+    flex-wrap: wrap
+    align-content: space-between
+    height: 100%
+    .csmsc1-img-d-1
+        transition: all .3s ease
+        margin:
+            bottom: 8px
+        img
+            border-radius: variables.$radius4
+    .csmsc1-text-1
+        @include short-code.textCreate1(14px, 1.4, variables.$fontWeightExtraBold, variables.$color2, 5px)
+    .csmsc1-text-2
+        @include short-code.textCreate1(20px, 1.4, variables.$fontWeightExtraBold, variables.$black, 5px)
+    .csmsc1-text-3
+        @include short-code.textCreate1(14px, 1.4, variables.$fontWeightRegular, variables.$black, 0px)
+        @include short-code.textAfterDots(118px , 118px, 6)
+    .csmsc1-text-4
+        @include short-code.textCreate1(16px, 1.4, variables.$fontWeightExtraBold, variables.$color2, 5px)
+    &:hover
+        transform: scale(1.03)
+        .csmsc1-img-d-1
+            transform: translateY(-5px)
+.csm-btn-5
+    @include short-code.textCreate1(14px, 22px, variables.$fontWeightSemiBold, variables.$white, 0px)
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    min-height: 30px
+    padding: 5px
+    min-width: 125px
+    background-color: variables.$color2
+    border: 1px solid variables.$color2
+    transition: all .3s ease
+    text-align: center
+    border-radius: variables.$radius6
+    &:hover
+        background-color: transparent
+        color: variables.$color2
+    i
+        padding:
+            right: 10px
+.csm-progress-item-1
+    background-color: variables.$color8
+    font-size: 9px
+    line-height: 1
+    color: variables.$white
+    font-weight: variables.$fontWeightBold
+    margin:
+        bottom: 15px
+    .csmpi1-bar-1
+        background-color: variables.$color2
+        transition: all .3s ease
+        &::before
+            content: ''
+            inset: 0px
+            position: absolute
+            background: variables.$white
+            border-radius: variables.$radius6
+            opacity: 0
+            animation: 2s cubic-bezier(0.5, 1, 0.7, 1) 0s infinite normal none running whiteWave
+
+@keyframes whiteWave
+    0%
+        width: 0
+        opacity: 0.2
+    20%
+        width: 0
+        opacity: 0.5
+    100%
+        width: 100%
+        opacity: 0
+
+.csm-btn-6
+    @include short-code.textCreate1(14px, 22px, variables.$fontWeightSemiBold, variables.$white, 0px)
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    min-height: 45px
+    padding: 5px
+    min-width: 125px
+    background-color: variables.$color1
+    border: 1px solid variables.$color1
+    transition: all .3s ease
+    text-align: center
+    border-radius: variables.$radius6
+    &:hover
+        background-color: transparent
+        color: variables.$color1
+    i
+        padding:
+            right: 10px
+.csm-hmpg-sec-4
+    padding: 40px 0px 25px
+.csm-global-desc-1
+    @include short-code.textCreate1(20px, 1.4, variables.$fontWeightMedium, variables.$black, 15px)
+.csm-sms-box-1
+    .cmsb1-text-1
+        @include short-code.textCreate1(20px, 1.4, variables.$fontWeightBold, variables.$color1, 15px)
+        a
+            display: inline-block
+            &::before
+                position: relative
+                top: 3px
+                font-size: 30px
+                @include short-code.fontAwesomeCreate('\f0e0')
+                padding:
+                    right: 10px
+    .cmsb1-text-2
+        @include short-code.textCreate1(20px, 1.4, variables.$fontWeightMedium, variables.$black, 15px)
+    .cmsb1-link-1
+        @include short-code.textCreate1(20px, 1.4, variables.$fontWeightBold, variables.$color1, 0px)
+        i
+            padding:
+                left: 5px
+            transition: all .3s ease
+        &:hover
+            i
+                padding:
+                    left: 15px
