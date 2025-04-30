@@ -810,3 +810,146 @@ button
         @include short-code.textCreate1(70px, 1.2, variables.$fontWeightExtraBold, variables.$white, 0px)
 .csm-in-sec-1
     padding: 60px 0px
+.csm-br-box-1
+    background-color: variables.$white
+    border-radius: variables.$radius6
+    border: 2px solid variables.$color2
+    @include short-code.backgroundShadowCreate(3px, 20px, rgba(0,0,0,0.25))
+    padding: 20px 30px
+    height: 100%
+.csm-icon-head-2
+    @include short-code.textCreate1(15px, 1.2, variables.$fontWeightExtraBold, variables.$black, 35px)
+    letter-spacing: 1.5px
+    &::before
+        @include short-code.fontAwesomeCreate('\e574')
+        margin:
+            bottom: 10px
+        background-color: variables.$color1
+        border-radius: 50%
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        width: 30px
+        height: 30px
+        color: variables.$color2
+        font-size: 16px
+    span
+        display: block
+.csm-form-link-1
+    @include short-code.textCreate1(16px, 1.4, variables.$fontWeightMedium, variables.$color2, 0px)
+    text-decoration: underline !important
+.csm-input-1
+    position: relative
+    label
+        @include short-code.textCreate1(14px, 1.5, variables.$fontWeightMedium, variables.$black, 0px)
+        position: relative !important
+        padding-left: 30px !important
+        padding-right: 0 !important
+        cursor: pointer !important
+        display: inline-block !important
+        left: 0 !important
+        top: 0 !important
+        a
+            color: variables.$color2
+            font-weight: variables.$fontWeightMedium
+            text-decoration: underline !important
+            &:hover
+                color: variables.$color2
+    input
+        cursor: pointer !important
+        position: absolute !important
+        left: 0 !important
+        top: 0 !important
+        opacity: 0 !important
+        &:not(:checked) + label
+            &:before
+                content: ''
+                position: absolute
+                left: 0px
+                top: 0px
+                width: 20px
+                height: 20px
+                border: 1px solid variables.$color1
+                background: transparent
+                border-radius: 50%
+        &:checked + label
+            &:before
+                content: ''
+                position: absolute
+                left: 0px
+                top: 0px
+                width: 20px
+                height: 20px
+                border: 1px solid variables.$color1
+                background: transparent
+                border-radius: 50%
+        &:checked + label
+            &:after
+                content: ''
+                background-color: variables.$color1
+                left: 5px
+                line-height: 1
+                position: absolute
+                top: 5px
+                width: 10px
+                height: 10px
+                border-radius: 50%
+.csm-form-info-1
+    @include short-code.textCreate1(15px, 24px, variables.$fontWeightLight, variables.$color7, 0px)
+    padding:
+        top: 15px
+        left: 5px
+    display: none
+.not-valid
+    .csm-form-info-1
+        display: block
+.csm-global-eye-btn-1
+    font-size: 16px
+    line-height: 1
+    color: variables.$color2
+    display: flex
+    align-items: center
+    justify-content: center
+    height: 20px
+    width: 20px
+    position: absolute
+    right: 15px
+    top: 15px
+    background-color: transparent
+    z-index: 2
+    &::before
+        @include short-code.fontAwesomeCreate('\f070')
+    &.open
+        &::before
+            content: '\f06e'
+.csm-form-1
+    ::placeholder
+        color: variables.$color9
+    input:not([type="submit"]), select
+        width: 100%
+        border: 1px solid variables.$color1
+        height: 45px
+        @include short-code.textCreate1(16px, 1.5, variables.$fontWeightSemiBold, variables.$color2, 0px)
+        transition: all .2s ease
+        padding: 0px 15px
+        border-radius: variables.$radius8
+        &:hover
+            border-color: variables.$color6
+        &:focus
+            outline: none
+            box-shadow: none
+            border-color: variables.$color6
+    textarea
+        width: 100%
+        resize: none
+        border:  1px solid variables.$color1
+        @include short-code.textCreate1(16px, 1.5, variables.$fontWeightSemiBold, variables.$color2, 0px)
+        transition: all .2s ease
+        padding: 10px 15px
+        border-radius: variables.$radius8
+        &:hover
+            border-color: variables.$color6
+        &:focus
+            outline: none
+            box-shadow: none
+            border-color: variables.$color6
