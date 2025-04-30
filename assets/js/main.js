@@ -63,3 +63,21 @@ $('.jsQuantity1 .q-box').on('change', function(){
     }
 });
 /* Quantity End */
+
+/* Input JS Start */
+if($('input[data-inputmask]').length > 0){
+    $(':input').inputmask();
+}
+/* Input JS End */
+
+/* Custom Select 2 1 Start */
+if($('.csm-phone-select2-1').length > 0){
+    $('.csm-phone-select2-1').select2({
+        placeholder: 'Seçiniz',
+        minimumResultsForSearch: -1,
+        containerCssClass : 'csm-global-select2-container-1',
+        dropdownCssClass: 'csm-global-select2-drop-1',
+        width: 'resolve'
+    });
+}
+/* Custom Select 2 1 End */

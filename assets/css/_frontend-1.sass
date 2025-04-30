@@ -809,7 +809,7 @@ button
     .csmpb1-text-1
         @include short-code.textCreate1(70px, 1.2, variables.$fontWeightExtraBold, variables.$white, 0px)
 .csm-in-sec-1
-    padding: 60px 0px
+    padding: 40px 0px
 .csm-br-box-1
     background-color: variables.$white
     border-radius: variables.$radius6
@@ -817,6 +817,29 @@ button
     @include short-code.backgroundShadowCreate(3px, 20px, rgba(0,0,0,0.25))
     padding: 20px 30px
     height: 100%
+    .csmbb1-head-1
+        @include short-code.textCreate1(22px, 1.4, variables.$fontWeightBold, variables.$color1, 45px)
+        letter-spacing: 2.2px
+        span
+            font-weight: variables.$fontWeightExtraBold
+            color: variables.$color2
+    .csmbb1-info-r-1
+        border-bottom: 1px solid variables.$color2
+        padding:
+            bottom: 5px
+        margin:
+            bottom: 5px
+        .csmbb1i-text-1
+            @include short-code.textCreate1(18px, 1.3, variables.$fontWeightExtraBold, variables.$color2, 0px)
+        .csmbb1i-text-2
+            @include short-code.textCreate1(18px, 1.3, variables.$fontWeightBold, variables.$color1, 0px)
+            text-align: right
+    .csmbb1-top-area-1
+        .csmbb1-info-r-1
+            &:last-child
+                border-bottom: 0px
+                margin:
+                    bottom: 30px
 .csm-icon-head-2
     @include short-code.textCreate1(15px, 1.2, variables.$fontWeightExtraBold, variables.$black, 35px)
     letter-spacing: 1.5px
@@ -925,6 +948,12 @@ button
 .csm-form-1
     ::placeholder
         color: variables.$color9
+    label
+        display: block
+        cursor: pointer
+        @include short-code.textCreate1(16px, 1.5, variables.$fontWeightSemiBold, variables.$color2, 8px)
+        padding:
+            left: 15px
     input:not([type="submit"]), select
         width: 100%
         border: 1px solid variables.$color1
@@ -939,6 +968,9 @@ button
             outline: none
             box-shadow: none
             border-color: variables.$color6
+        &:disabled
+            background-color: variables.$color10
+            cursor: not-allowed
     textarea
         width: 100%
         resize: none
@@ -946,10 +978,179 @@ button
         @include short-code.textCreate1(16px, 1.5, variables.$fontWeightSemiBold, variables.$color2, 0px)
         transition: all .2s ease
         padding: 10px 15px
-        border-radius: variables.$radius8
+        border-radius: variables.$radius6
         &:hover
             border-color: variables.$color6
         &:focus
             outline: none
             box-shadow: none
             border-color: variables.$color6
+        &:disabled
+            background-color: variables.$color10
+            cursor: not-allowed
+.select2
+    width: 100% !important
+.csm-global-select2-container-1
+    .select2-container--default
+        .select2-selection--single
+            border-radius: variables.$radius8
+            border: 1px solid variables.$color1
+            .select2-selection__arrow
+                top: 10px
+                right: 15px
+                b
+                    border: 0
+                    top: 5px
+                    &::before
+                        @include short-code.fontAwesomeCreate('\f107')
+                        color: variables.$color1
+        &.select2-container--open
+            &.select2-container--above
+                .select2-selection--single
+                    border-top-left-radius: variables.$radius8
+                    border-top-right-radius: variables.$radius8
+            &.select2-container--below
+                .select2-selection--single
+                    border-bottom-left-radius: variables.$radius8
+                    border-bottom-right-radius: variables.$radius8
+            .select2-selection--single
+                .select2-selection__arrow
+                    b
+                        &::before
+                            content: '\f106'
+        .select2-selection__rendered
+            color: variables.$color2
+            font-weight: variables.$fontWeightSemiBold
+            padding: 0px 15px
+            line-height: 45px
+            font-size: 16px
+    .select2-container
+        .select2-selection--single
+            height: 45px
+.select2-container--default
+    .csm-global-select2-drop-1
+        border: 1px solid variables.$color1
+        border-radius: variables.$radius4
+        @include short-code.backgroundShadowCreate(3px, 6px, rgba(0,0,0,0.2))
+        padding: 12px 0px
+        .select2-results__option--selected
+            background-color: variables.$color2
+            color: variables.$white
+    .select2-results__option--highlighted
+        &.select2-results__option--selectable
+            background-color: variables.$color1
+.csm-login-btn-1
+    font-size: 45px
+    line-height: 1
+    color: variables.$color1
+.csm-login-head-1
+    @include short-code.textCreate1(22px, 1.4, variables.$fontWeightBold, variables.$color1, 45px)
+    letter-spacing: 2.2px
+    span
+        font-weight: variables.$fontWeightExtraBold
+        color: variables.$color2
+.csm-tabs-m-1
+    li
+        margin:
+            bottom: 15px
+        padding:
+            left: 15px
+            right: 15px
+        width: calc(100% / 3)
+        button, a
+            display: flex
+            align-items: center
+            justify-content: center
+            text-align: center
+            min-height: 45px
+            border-radius: variables.$radius6
+            border: 2px solid variables.$color1
+            @include short-code.textCreate1(18px, 1.4, variables.$fontWeightBold, variables.$color1, 0px)
+            transition: all .3s ease
+            width: 100%
+            i
+                padding:
+                    right: 10px
+            &:hover
+                background-color: variables.$color6
+                border-color: variables.$color6
+                color: variables.$white
+            &.active
+                background-color: variables.$color2
+                border-color: variables.$color2
+                color: variables.$white
+.csm-dataTable-1
+    .dt-column-order
+        display: none
+    table
+        &.dataTable
+            &.nowrap
+                th
+                    text-align: center
+                    background-color: variables.$color2
+                    @include short-code.textCreate1(12px, 1.2, variables.$fontWeightBlack, variables.$white, 0px)
+                    border: 1px solid variables.$white
+                    border-bottom: 0px
+                    white-space: break-spaces
+                    &:first-child
+                        border-top-left-radius: variables.$radius3
+                        border-left: 0
+                    &:last-child
+                        border-top-right-radius: variables.$radius3
+                        border-right: 0
+                td
+                    background-color: variables.$white
+                    box-shadow: none !important
+                    border: 1px solid variables.$color2 !important
+                    @include short-code.textCreate1(14px, 1.3, variables.$fontWeightRegular, variables.$color2, 0px)
+                    white-space: break-spaces
+                    &:last-child
+                        text-align: center
+                        a
+                            text-decoration: underline !important
+    div
+        &.dt-container
+            &.dt-empty-footer
+                .dt-scroll-body
+                    border: 0
+            div
+                &.dt-layout-row
+                    justify-content: center
+                    .dt-layout-cell
+                        justify-content: center !important
+                        margin: 0 auto !important
+            .dt-paging
+                .dt-paging-button
+                    display: inline-flex
+                    align-items: center
+                    justify-content: center
+                    min-width: auto
+                    width: 30px
+                    height: 30px
+                    padding: 0px
+                    border-radius: variables.$radius1
+                    border: 1px solid variables.$color2
+                    @include short-code.textCreate1(14px, 1.3, variables.$fontWeightRegular, variables.$color2, 0px)
+                    margin:
+                        left: 5px
+                    &.current
+                        background: variables.$color2
+                        color: variables.$white !important
+                    &:hover
+                        background: variables.$color1 !important
+                        color: variables.$white !important
+                        border-color: variables.$color1
+                    &:focus
+                        outline: none
+                        box-shadow: none
+                    &.disabled
+                        cursor: not-allowed
+                        background: variables.$color9
+                        border-color: variables.$color9
+                        color: variables.$white !important
+                        &:hover
+                            background: variables.$color9 !important
+                            border-color: variables.$color9 !important
+                            color: variables.$white !important
+.csm-form-info-2
+    @include short-code.textCreate1(16px, 1.5, variables.$fontWeightMedium, variables.$color4, 0px)
