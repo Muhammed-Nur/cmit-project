@@ -1,0 +1,18 @@
+[
+    {
+        "SMSNumber": "5601",
+        "SMSDesc1": "FİLİSTİN",
+        "SMSDesc2": "FİLİSTİN yazıp 5601’e göndererek 25 TL tutarında bağış yapabilirsiniz.",
+        "SMSLink": "https://bagis.tdv.org/bagis/sms-yolu-ile-bagis"
+    },{
+        "SMSNumber": "2177",
+        "SMSDesc1": "FITRE",
+        "SMSDesc2": "FITRE yazıp 2177'e SMS göndererek 180 TL tutarında fitre bağışı yapabilirsiniz.",
+        "SMSLink": "https://bagis.tdv.org/bagis/sms-yolu-ile-bagis"
+    },{
+        "SMSNumber": "2177",
+        "SMSDesc1": "FIDYE",
+        "SMSDesc2": "FIDYE yazıp 2177'e SMS göndererek 180 TL tutarında fidye bağışı yapabilirsiniz.",
+        "SMSLink": "https://bagis.tdv.org/bagis/sms-yolu-ile-bagis"
+    }
+]

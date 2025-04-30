@@ -274,49 +274,7 @@
 
       <section class="csm-hmpg-sec-4 relative">
         <div class="w-full max-w-[1332px] pl-4 pr-4 m-auto relative">
-          <div class="flex flex-wrap -ml-3 -mr-3">
-            <div class="w-full max-w-full md:max-w-[calc(100%/3)] lg:max-w-[calc(100%/3)] xl:max-w-[calc(100%/3)] pl-3 pr-3 relative mb-4">
-              <div class="csm-sms-box-1">
-                <p class="cmsb1-text-1">
-                  <a href="sms:5601?body=FİLİSTİN" title="FİLİSTİN SMS">5601</a>
-                </p>
-
-                <p class="cmsb1-text-2">
-                  FİLİSTİN yazıp 5601’e göndererek 25 TL tutarında bağış yapabilirsiniz.
-                </p>
-
-                <a href="" title="" class="cmsb1-link-1">Diğer Bağışlar <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
-
-            <div class="w-full max-w-full md:max-w-[calc(100%/3)] lg:max-w-[calc(100%/3)] xl:max-w-[calc(100%/3)] pl-3 pr-3 relative mb-4">
-              <div class="csm-sms-box-1">
-                <p class="cmsb1-text-1">
-                  <a href="sms:2177?body=FITRE" title="FİTRE SMS">2177</a>
-                </p>
-
-                <p class="cmsb1-text-2">
-                  FITRE yazıp 2177'e SMS göndererek 180 TL tutarında fitre bağışı yapabilirsiniz.
-                </p>
-
-                <a href="" title="" class="cmsb1-link-1">Diğer Bağışlar <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
-
-            <div class="w-full max-w-full md:max-w-[calc(100%/3)] lg:max-w-[calc(100%/3)] xl:max-w-[calc(100%/3)] pl-3 pr-3 relative mb-4">
-              <div class="csm-sms-box-1">
-                <p class="cmsb1-text-1">
-                  <a href="sms:2177?body=FIDYE" title="FIDYE SMS">2177</a>
-                </p>
-
-                <p class="cmsb1-text-2">
-                  FIDYE yazıp 2177'e SMS göndererek 180 TL tutarında fidye bağışı yapabilirsiniz.
-                </p>
-
-                <a href="" title="" class="cmsb1-link-1">Diğer Bağışlar <i class="fa-solid fa-arrow-right"></i></a>
-              </div>
-            </div>
-          </div>
+          <div class="flex flex-wrap -ml-3 -mr-3 jsFetch1"></div>
         </div>
       </section>
 
@@ -944,6 +902,29 @@
       }
 
       getDataXHR();
+    </script>
+
+    <script>
+      function getDataFetch() {
+        fetch('assets/js/homepage-sms.json')
+          .then(response => response.json())
+          .then(data => {
+            for(i=0;i < data.length;i++){
+              $('.jsFetch1').append('<div class="w-full max-w-full md:max-w-[calc(100%/3)] lg:max-w-[calc(100%/3)] xl:max-w-[calc(100%/3)] pl-3 pr-3 relative mb-4">' +
+                '<div class="csm-sms-box-1">' +
+                  '<p class="cmsb1-text-1">' +
+                    '<a href="sms:' + data[i].SMSNumber + '?body=' + data[i].SMSDesc1 + '" title="' + data[i].SMSDesc1 + ' SMS">' + data[i].SMSNumber + '</a>' +
+                  '</p>' +
+                  '<p class="cmsb1-text-2">' + data[i].SMSDesc2 + '</p>' +
+                  '<a href="' + data[i].SMSLink + '" title="" class="cmsb1-link-1">Diğer Bağışlar <i class="fa-solid fa-arrow-right"></i></a>' +
+                '</div>' +
+              '</div>');
+            }
+          })
+          .catch(() => $('.jsFetch1').append('<p class="text-center text-6xl">Burada Fetch GET kullanılmıştır. (Fetch GET Hatası)</p>'));
+      }
+
+      getDataFetch();
     </script>
   </body>
 </html>

@@ -120,7 +120,7 @@
               </button>
             </li>
             <li>
-              <button type="button" class="jsNavsBtn1" control-area="tabs-content-2">
+              <button type="button" class="jsNavsBtn1 jsAxiosBtn1" control-area="tabs-content-2">
                 <i class="fa-solid fa-user"></i> Hesabım
               </button>
             </li>
@@ -450,7 +450,9 @@
             .catch(() => $('.jsAxios1').text('Axios kullanılmıştır o yüzden bazı alanlar boş olabilir. (Axios GET Hatası)'));
       }
 
-      getDataAxios();
+      $('.jsAxiosBtn1').on('click', function(){
+        getDataAxios();
+      });
     </script>
 
     <script>
