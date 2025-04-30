@@ -151,91 +151,7 @@
           <h4 class="csm-icon-head-1 text-center relative">FAALİYETLERİMİZ</h4>
           <h1 class="csm-global-head-1 text-center"><span>ÖNE ÇIKAN</span> FAALİYETLER</h1>
 
-          <div class="flex flex-wrap -ml-3 -mr-3">
-            <div class="w-full max-w-[50%] md:max-w-[calc(100%/3)] lg:max-w-[calc(100%/3)] xl:max-w-[calc(100%/6)] pl-3 pr-3 relative mb-5">
-              <a href="" title="">
-                <div class="csm-icon-card-1" style="--bg-color: #B45B7E;">
-                  <h6 class="csmic1-head-1 w-full">Gazze <br>Yardımları</h6>
-                  <div class="csmic1-image-d-1 w-full">
-                    <img src="assets/img/other/earth-icon-1.svg" width="80" height="80" alt="Earth" class="h-auto max-w-full m-auto">
-                  </div>
-                  <p class="csmic1-link-1 w-full">
-                    İnceleyin <i class="fa-solid fa-arrow-right"></i>
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div class="w-full max-w-[50%] md:max-w-[calc(100%/3)] lg:max-w-[calc(100%/3)] xl:max-w-[calc(100%/6)] pl-3 pr-3 relative mb-5">
-              <a href="" title="">
-                <div class="csm-icon-card-1" style="--bg-color: #71BCFF;">
-                  <h6 class="csmic1-head-1 w-full">Suriye <br>Yardımları</h6>
-                  <div class="csmic1-image-d-1 w-full">
-                    <img src="assets/img/other/earth-icon-1.svg" width="80" height="80" alt="Earth" class="h-auto max-w-full m-auto">
-                  </div>
-                  <p class="csmic1-link-1 w-full">
-                    İnceleyin <i class="fa-solid fa-arrow-right"></i>
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div class="w-full max-w-[50%] md:max-w-[calc(100%/3)] lg:max-w-[calc(100%/3)] xl:max-w-[calc(100%/6)] pl-3 pr-3 relative mb-5">
-              <a href="" title="">
-                <div class="csm-icon-card-1" style="--bg-color: #924362;">
-                  <h6 class="csmic1-head-1 w-full">Kurban <br>Bağışı</h6>
-                  <div class="csmic1-image-d-1 w-full">
-                    <img src="assets/img/other/cow-icon-1.svg" width="100" height="80" alt="Cow" class="h-auto max-w-full m-auto">
-                  </div>
-                  <p class="csmic1-link-1 w-full">
-                    İnceleyin <i class="fa-solid fa-arrow-right"></i>
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div class="w-full max-w-[50%] md:max-w-[calc(100%/3)] lg:max-w-[calc(100%/3)] xl:max-w-[calc(100%/6)] pl-3 pr-3 relative mb-5">
-              <a href="" title="">
-                <div class="csm-icon-card-1" style="--bg-color: #006FD3;">
-                  <h6 class="csmic1-head-1 w-full">Nakdi <br>Destek</h6>
-                  <div class="csmic1-image-d-1 w-full">
-                    <img src="assets/img/other/money-bill-icon-1.svg" width="90" height="80" alt="Money" class="h-auto max-w-full m-auto">
-                  </div>
-                  <p class="csmic1-link-1 w-full">
-                    İnceleyin <i class="fa-solid fa-arrow-right"></i>
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div class="w-full max-w-[50%] md:max-w-[calc(100%/3)] lg:max-w-[calc(100%/3)] xl:max-w-[calc(100%/6)] pl-3 pr-3 relative mb-5">
-              <a href="" title="">
-                <div class="csm-icon-card-1" style="--bg-color: #773650;">
-                  <h6 class="csmic1-head-1 w-full">Giysi <br>Bağışı</h6>
-                  <div class="csmic1-image-d-1 w-full">
-                    <img src="assets/img/other/shirt-icon-1.svg" width="100" height="80" alt="Shirt" class="h-auto max-w-full m-auto">
-                  </div>
-                  <p class="csmic1-link-1 w-full">
-                    İnceleyin <i class="fa-solid fa-arrow-right"></i>
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div class="w-full max-w-[50%] md:max-w-[calc(100%/3)] lg:max-w-[calc(100%/3)] xl:max-w-[calc(100%/6)] pl-3 pr-3 relative mb-5">
-              <a href="" title="">
-                <div class="csm-icon-card-1" style="--bg-color: #005BAC;">
-                  <h6 class="csmic1-head-1 w-full">Su <br>Kuyusu</h6>
-                  <div class="csmic1-image-d-1 w-full">
-                    <img src="assets/img/other/hand-water-i-1.svg" width="90" height="80" alt="Water" class="h-auto max-w-full m-auto">
-                  </div>
-                  <p class="csmic1-link-1 w-full">
-                    İnceleyin <i class="fa-solid fa-arrow-right"></i>
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
+          <div class="flex flex-wrap -ml-3 -mr-3 jsXHRData1"></div>
         </div>
       </section>
 
@@ -995,5 +911,39 @@
     <script src="assets/vendor/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/home-page.js"></script>
+
+    <script>
+      function getDataXHR() {
+        const xhr = new XMLHttpRequest();
+        xhr.open('GET', 'assets/js/homepage-data.json', true);
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText);
+            
+            for(i=0;i < data.length;i++){
+              $('.jsXHRData1').append('<div class="w-full max-w-[50%] md:max-w-[calc(100%/3)] lg:max-w-[calc(100%/3)] xl:max-w-[calc(100%/6)] pl-3 pr-3 relative mb-5">' +
+              '<a href="' + data[i].activityLink + '" title="' + data[i].activityName + '" target="_blank">' +
+                '<div class="csm-icon-card-1" style="--bg-color: ' + data[i].activityColor + ';">' +
+                  '<h6 class="csmic1-head-1 w-full">' + data[i].activityName + '</h6>' +
+                  '<div class="csmic1-image-d-1 w-full">' +
+                    '<img src="' + data[i].activityImage + '" width="80" height="80" alt="' + data[i].activityName + '" class="h-auto max-w-full m-auto">' +
+                  '</div>' +
+                  '<p class="csmic1-link-1 w-full">' +
+                    'İnceleyin <i class="fa-solid fa-arrow-right"></i>' +
+                  '</p>' +
+                '</div>' +
+            ' </a>' +
+            '</div>');
+            }
+          } else {
+            console.log('XHR GET Hatası');
+          }
+        };
+        xhr.onerror = () => $('.jsXHRData1').append('<p class="text-center text-6xl">Burada XHR kullanılmıştır. (XHR bağlantı hatası)</p>');
+        xhr.send();
+      }
+
+      getDataXHR();
+    </script>
   </body>
 </html>

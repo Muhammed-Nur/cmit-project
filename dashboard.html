@@ -110,7 +110,7 @@
       <section class="csm-in-sec-1">
         <div class="w-full max-w-[1332px] pl-4 pr-4 m-auto">
           <h2 class="csm-login-head-1">
-            <span>Hoşgeldiniz</span> Muhammed Nur Taşova
+            <span class="csmlh1-span-1">Hoşgeldiniz</span> <span class="jsAxios1"></span>
           </h2>
 
           <ul class="csm-tabs-m-1 flex flex-wrap justify-center mb-6 jsNavsMUl1">
@@ -198,22 +198,22 @@
                     <div class="flex flex-wrap -ml-2 -mr-2">
                       <div class="w-full max-w-full md:max-w-[50%] lg:max-w-[25%] xl:max-w-[25%] pl-2 pr-2 mb-6 relative">
                         <label for="name">Ad*</label>
-                        <input type="text" id="name" name="name" value="Muhammed Nur">
+                        <input type="text" id="name" name="name">
                       </div>
 
                       <div class="w-full max-w-full md:max-w-[50%] lg:max-w-[25%] xl:max-w-[25%] pl-2 pr-2 mb-6 relative">
                         <label for="surname">Soyad*</label>
-                        <input type="text" id="surname" name="surname" value="Taşova">
+                        <input type="text" id="surname" name="surname">
                       </div>
 
                       <div class="w-full max-w-full md:max-w-[50%] lg:max-w-[25%] xl:max-w-[25%] pl-2 pr-2 mb-6 relative">
                         <label for="email">E-Posta*</label>
-                        <input type="email" id="email" name="email" value="muhammedntasova@gmail.com" disabled>
+                        <input type="email" id="email" name="email" disabled>
                       </div>
 
                       <div class="w-full max-w-full md:max-w-[50%] lg:max-w-[25%] xl:max-w-[25%] pl-2 pr-2 mb-6 relative">
                         <label for="phone">Cep Telefonu*</label>
-                        <input type="text" id="phone" name="phone" data-inputmask="'mask': '+99 999 999 99 99'" value="+90 506 522 02 49">
+                        <input type="text" id="phone" name="phone" data-inputmask="'mask': '+99 999 999 99 99'">
                       </div>
 
                       <div class="w-full max-w-full md:max-w-[50%] lg:max-w-[25%] xl:max-w-[25%] pl-2 pr-2 mb-6 relative">
@@ -223,7 +223,7 @@
                             <option></option>
                             <option value="0">1990</option>
                             <option value="1">1991</option>
-                            <option value="2" selected>1992</option>
+                            <option value="2">1992</option>
                             <option value="3">1993</option>
                           </select>
                         </div>
@@ -234,7 +234,7 @@
                         <div class="csm-global-select2-container-1">
                           <select class="csm-phone-select2-1" name="country" id="country" required>
                             <option></option>
-                            <option value="0" selected>Türkiye</option>
+                            <option value="0">Türkiye</option>
                           </select>
                         </div>
                       </div>
@@ -244,7 +244,7 @@
                         <div class="csm-global-select2-container-1">
                           <select class="csm-phone-select2-1" name="province" id="province" required>
                             <option></option>
-                            <option value="0" selected>Ankara</option>
+                            <option value="0">Ankara</option>
                           </select>
                         </div>
                       </div>
@@ -254,24 +254,24 @@
                         <div class="csm-global-select2-container-1">
                           <select class="csm-phone-select2-1" name="district" id="district" required>
                             <option></option>
-                            <option value="0" selected>Keçiören</option>
+                            <option value="0">Keçiören</option>
                           </select>
                         </div>
                       </div>
 
                       <div class="w-full max-w-full pl-2 pr-2 mb-6 relative">
                         <label for="address">Açık Adres*</label>
-                        <textarea name="address" id="address" rows="3">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</textarea>
+                        <textarea name="address" id="address" rows="3"></textarea>
                       </div>
 
                       <div class="w-full max-w-full pl-2 pr-2 mb-6 relative">
                         <div class="csm-input-1 mb-1">
-                          <input type="checkbox" id="smsBox1" name="smsBox1" checked>
+                          <input type="checkbox" id="smsBox1" name="smsBox1">
                           <label for="smsBox1">Kampanyalardan SMS ile haberdar olmak istiyorum.</label>
                         </div>
 
                         <div class="csm-input-1 mb-1">
-                          <input type="checkbox" id="epostaBox1" name="epostaBox1" checked>
+                          <input type="checkbox" id="epostaBox1" name="epostaBox1">
                           <label for="epostaBox1">Kampanyalardan E-posta ile haberdar olmak istiyorum.</label>
                         </div>
                       </div>
@@ -405,9 +405,53 @@
     <script src="assets/vendor/inputmask/jquery.inputmask.min.js"></script>
     <script src="assets/vendor/select2/dist/js/select2.full.min.js"></script>
     <script src="assets/vendor/select2/dist/js/i18n/tr.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/tailwind-nav-tabs.js"></script>
     <script src="assets/js/account-table.js"></script>
+
+    <script>
+      function selectOptionByText(selectId, text) {
+        var found = false;
+        $('#' + selectId + ' option').each(function() {
+          if ($(this).text().trim() === text.trim()) {
+            $('#' + selectId).val($(this).val()).trigger('change');
+            found = true;
+            return false;
+          }
+        });
+
+        if (!found) {
+          console.log('Seçilen text bulunamadı:', text);
+        }
+      }
+
+      function getDataAxios() {
+        axios.get('assets/js/dashboard-user.json')
+            .then(response => {
+              const data = response.data;
+              $('.jsAxios1').text(data.userName + ' ' + data.userSurname);
+
+              $('#name').val(data.userName);
+              $('#surname').val(data.userSurname);
+              $('#email').val(data.userEmail);
+              $('#phone').val(data.userPhone);
+
+              selectOptionByText('birthday', data.userBirthday);
+              selectOptionByText('country', data.userCountry);
+              selectOptionByText('province', data.userProvince);
+              selectOptionByText('district', data.userDistrict);
+              
+              $('#address').val(data.userAddress);
+
+              $('#smsBox1').prop('checked', data.userSMSPermission === 'on');
+              $('#epostaBox1').prop('checked', data.userEmailPermission === 'on');
+            })
+            .catch(() => $('.jsAxios1').text('Axios kullanılmıştır o yüzden bazı alanlar boş olabilir. (Axios GET Hatası)'));
+      }
+
+      getDataAxios();
+    </script>
 
     <script>
       var dataTSet1 = [{

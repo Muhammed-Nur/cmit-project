@@ -113,15 +113,15 @@
               <span>FAALİYETLERİMİZ</span>
             </h1>
 
-            <form action="" autocomplete="off" class="csm-form-1 jsFormControl1" novalidate>
+            <form action="" autocomplete="off" class="csm-form-1 jsFormControl1 jsAjaxPost1" novalidate>
               <div class="mb-5">
-                <input type="email" id="" name="" placeholder="E-posta" required>
+                <input type="email" id="email" name="email" placeholder="E-posta" required>
   
                 <div class="csm-form-info-1 jsInfoD1">Lütfen bu alanı doldurunuz.</div>
               </div>
   
               <div class="mb-5 jsPasswordEye1 relative">
-                <input type="password" id="" name="" placeholder="Şifre" required>
+                <input type="password" id="password" name="password" placeholder="Şifre" required>
   
                 <button type="button" class="csm-global-eye-btn-1 jsEyeBtn1"></button>
   
@@ -145,6 +145,8 @@
                 <button type="submit" class="csm-btn-6 w-full">Giriş Yap</button>
               </div>
             </form>
+
+            <div class="pt-4 mb-4" id="ajaxSonuc"></div>
           </div>
         </div>
       </section>
@@ -256,5 +258,25 @@
     <script src="assets/vendor/jquery/jquery-3.4.1.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/login-form.js"></script>
+
+    <script>
+      $('.jsAjaxPost1').submit(function(e) {
+        e.preventDefault();
+
+        var formData = $(this).serialize();
+
+        $.ajax({
+          url: "login.php",
+          type: "POST",
+          data: formData,
+          success: function(response) {
+            $('#ajaxSonuc').html("Sunucudan gelen: " + response);
+          },
+          error: function(xhr, status, error) {
+            $('#ajaxSonuc').html("Bir hata oluştu: " + error);
+          }
+        });
+      });
+    </script>
   </body>
 </html>

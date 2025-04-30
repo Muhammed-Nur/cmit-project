@@ -1,0 +1,39 @@
+[
+    {
+        "activityId": "1",
+        "activityColor": "#B45B7E",
+        "activityName": "Gazze <br>Yardımları",
+        "activityImage": "/assets/img/other/earth-icon-1.svg",
+        "activityLink": "https://bagis.tdv.org/"
+    },{
+        "activityId": "2",
+        "activityColor": "#71BCFF",
+        "activityName": "Suriye <br>Yardımları",
+        "activityImage": "/assets/img/other/earth-icon-1.svg",
+        "activityLink": "https://bagis.tdv.org/"
+    },{
+        "activityId": "3",
+        "activityColor": "#924362",
+        "activityName": "Kurban <br>Bağışı",
+        "activityImage": "/assets/img/other/cow-icon-1.svg",
+        "activityLink": "https://bagis.tdv.org/"
+    },{
+        "activityId": "4",
+        "activityColor": "#006FD3",
+        "activityName": "Nakdi <br>Destek",
+        "activityImage": "/assets/img/other/money-bill-icon-1.svg",
+        "activityLink": "https://bagis.tdv.org/"
+    },{
+        "activityId": "5",
+        "activityColor": "#773650",
+        "activityName": "Giysi <br>Bağışı",
+        "activityImage": "/assets/img/other/shirt-icon-1.svg",
+        "activityLink": "https://bagis.tdv.org/"
+    },{
+        "activityId": "6",
+        "activityColor": "#005BAC",
+        "activityName": "Su <br>Kuyusu",
+        "activityImage": "/assets/img/other/hand-water-i-1.svg",
+        "activityLink": "https://bagis.tdv.org/"
+    }
+]
